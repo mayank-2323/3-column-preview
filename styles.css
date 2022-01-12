@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray : hsl(0, 0%, 95%); /* (background, headings, buttons) */
+
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lexend Deca';
+    line-height: 1.8rem;
+    background-color: var(--Very-light-gray);
+    /* height:100vh;
+    display:flex;
+    align-items: center; */
+}
+
+.container{
+    /* width:70vw; */
+    margin:0 auto;
+    padding:2rem;
+}
+.card{
+    margin:0 auto;
+    padding:2.5rem;
+    /* outline:2px solid red; */
+}
+.card-heading{
+    font-family: 'Big Shoulders Display';
+    color:var(--Very-light-gray);
+    font-size: 38px;
+    margin:35px 0;
+
+}
+.card-para{
+    color: var(--Transparent-white);
+}
+
+.card-para p{
+    margin-bottom:15px;
+}
+.card-orange{
+    background-color: var(--Bright-orange);
+    border-radius: 7px 7px 0 0;
+}
+.card-cyan{
+    background-color: var(--Dark-cyan);
+}
+.card-teal{
+    background-color: var(--Very-dark-cyan);
+    border-radius:0 0 7px 7px;
+}
+.card-orange .para-button{
+    background-color: #fff;
+    border:2px solid white;
+    border-radius:40px;
+    padding:15px 35px;
+    font-family: inherit;
+    color: var(--Bright-orange);
+    margin:20px 0;
+    font-size:0.9rem;
+}
+.card-cyan .para-button{
+    background-color: #fff;
+    border:2px solid white;
+    border-radius:40px;
+    padding:15px 35px;
+    font-family: inherit;
+    color: var(--Dark-cyan);
+    margin:20px 0;
+    font-size:0.9rem;
+}
+.card-teal .para-button{
+    background-color: #fff;
+    border:2px solid white;
+    border-radius:40px;
+    padding:15px 35px;
+    font-family: inherit;
+    color: var(--Very-dark-cyan);
+    margin:20px 0;
+    font-size:0.9rem;
+}
+.para-button:hover{
+    color: white;
+    background: transparent;
+    transition: 0.2s ease-in-out;
+}
+
+
+.attribution{
+    text-align: center;
+}
+
+@media (min-width:768px){
+
+    body{
+        height:100vh;
+        display: flex;
+        align-items: center;
+    }
+    .container{
+        margin:0 auto;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    /* .card-orange,.card-cyan,.card-teal{
+        position:relative;
+    }
+    .para-button{
+        position:absolute;
+        
+    } */
+    .card-orange{
+        border-radius:7px 0 0 7px;
+    }
+    .card-teal{
+        border-radius:0 7px 7px 0;
+    }
+}
+
+
+
